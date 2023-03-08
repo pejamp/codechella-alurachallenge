@@ -1,0 +1,72 @@
+@import "../../styles/style-guide.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 24px;
+  gap: 32px;
+  background: $background-header;
+
+  .header__logo {
+    width: 234px;
+    height: 34px;
+    display: flex;
+
+    img {
+      object-fit: cover;
+      flex: 1;
+    }
+  }
+
+  .header__hamburger-menu {
+    position: relative;
+
+    .hamburger-menu__btn {
+      width: 32px;
+      height: 32px;
+
+      i {
+        font-size: 32px;
+        color: $text-color;
+      }
+    }
+
+    .hamburger-menu__content {
+      display: grid;
+      position: absolute;
+      top: 40px;
+      right: 0;
+      width: 193px;
+      padding: 16px;
+      text-align: center;
+      background: $background-hamburguer-menu;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.25s ease-in-out;
+      
+      &.open {
+        visibility: visible;
+        opacity: 1;
+        transition: all 0.25s ease-in-out;
+      }
+
+      a {
+        font-weight: 700;
+        font-size: 1.25rem;
+        line-height: 40px;
+        border-top: 1px solid #FFFFFF;
+        padding: 8px 0;
+
+        &:first-child {
+          border: none;
+          padding-top: 0;
+        }
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}

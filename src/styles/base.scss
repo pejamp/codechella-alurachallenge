@@ -1,0 +1,9 @@
+@import './style-guide.scss';
+
+body {
+  font-family: $text-font;
+  background: $background-color no-repeat;
+  height: 100vh;
+  font-size: 16px;
+  color: $text-color;
+}

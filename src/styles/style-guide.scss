@@ -1,0 +1,19 @@
+$title-font: 'Calistoga', cursive;
+$text-font: 'Raleway', sans-serif;
+
+$boreal-purple: #4650BD;
+$dark-green: #008364;
+$dark-blue: #304968;
+$green: #36C1A0;
+$light-violet: #B6BCFF;
+$boreal-gradient: linear-gradient(180deg, $dark-blue 0%, $green 52.6%, $boreal-purple 100%);
+
+$button-color: $boreal-purple;
+$button-shadow: 4px 4px 0px #000000;
+$button-radius: 16px;
+$button-hover: #606ADA;
+
+$background-color: $boreal-gradient;
+$background-header: $boreal-purple;
+$background-hamburguer-menu: $boreal-purple;
+$text-color: #FFFFFF;
