@@ -25,8 +25,9 @@
     .hamburger-menu__btn {
       width: 32px;
       height: 32px;
+      display: flex;
 
-      i {
+      svg {
         font-size: 32px;
         color: $text-color;
       }

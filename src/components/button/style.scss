@@ -1,0 +1,26 @@
+@import '../../styles/style-guide.scss';
+
+.button-container {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background-color: $button-color;
+  box-shadow: $button-shadow;
+  border-radius: $button-radius;
+  width: 100%;
+
+  .button__text {
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 40px;
+  }
+
+  .button__icon {
+    svg {
+      font-size: 32px;
+      color: $text-color;
+    }
+  }
+}
