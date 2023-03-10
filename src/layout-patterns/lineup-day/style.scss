@@ -1,0 +1,58 @@
+@import '../../styles/style-guide.scss';
+
+.lineup-day {
+  display: grid;
+  justify-items: center;
+  gap: 48px;
+  padding: 48px 0;
+
+  .lineup__date {
+    padding: 16px;
+    background-color: $dark-green;
+  
+    h3 {
+      font-family: $title-font;
+      font-size: 2rem;
+      line-height: 42px;
+      text-align: center;
+    }
+  }
+  
+  .lineup__attractions {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  
+    .attractions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      text-align: center;
+  
+      .attractions__headliner {
+        font-weight: 800;
+        font-size: 3rem;
+        line-height: 56px;
+      }
+  
+      .attractions__second {
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 47px;
+      }
+  
+      .attractions__third {
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 38px;
+      }
+  
+      .attractions__fourth{
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 38px;
+      }
+    }
+  }
+}

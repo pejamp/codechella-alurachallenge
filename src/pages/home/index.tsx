@@ -4,6 +4,7 @@ import { Footer } from "../../components/footer";
 import { Header } from "../../components/header";
 import BannerHomepage from '../../assets/images/banner-homepage.jpg';
 import { DatesSection } from '../../layout-patterns/dates-section';
+import { LineupDay } from '../../layout-patterns/lineup-day';
 
 export function Home() {
   return (
@@ -12,6 +13,11 @@ export function Home() {
       <main className='home-container__content-wrap'>
         <Banner bannerImage={BannerHomepage} hashtagCodeChella />
         <DatesSection />
+        <section className='lineup'>
+          <h2 className='lineup__title'>/Line-Up/</h2>
+          <LineupDay />
+          <LineupDay />
+        </section>
       </main>
       <Footer />
     </div>
