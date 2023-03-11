@@ -20,15 +20,19 @@ export function Header() {
         <button className='hamburger-menu__btn' onClick={handleMenuClick}>
           <MenuIcon />
         </button>
-        <div className={`hamburger-menu__content ${menuOpen ? 'open' : ''}`} onMouseDown={(event) => event.preventDefault()}>
+        <nav className={`hamburger-menu__content ${menuOpen ? 'open' : ''}`} onMouseDown={(event) => event.preventDefault()}>
           <a href="#">A experiência</a>
           <a href="#">Mapa de Setores</a>
           <a href="#">Informações</a>
           <a href="#">Ingresso</a>
-        </div>
+        </nav>
       </div>
+      <nav className='navmenu'>
+        <a href="#">A experiência</a>
+        <a href="#">Mapa de Setores</a>
+        <a href="#">Informações</a>
+        <a href="#">Ingresso</a>
+      </nav>
     </header>
   );
 } 
-
-//<i className="fa-solid fa-bars"></i>

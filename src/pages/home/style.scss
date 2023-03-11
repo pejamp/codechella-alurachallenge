@@ -20,5 +20,15 @@
         padding: 32px 0;
       }
     }
+
+    .banner-bottom {
+      width: 100%;
+      height: 338px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-color: #ffffff;
+      mix-blend-mode: multiply;
+    }
   }
 }

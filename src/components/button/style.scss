@@ -10,6 +10,7 @@
   box-shadow: $button-shadow;
   border-radius: $button-radius;
   width: 100%;
+  transition: all 0.25s ease-in-out;
 
   .button__text {
     font-weight: 700;
@@ -22,5 +23,9 @@
       font-size: 32px;
       color: $text-color;
     }
+  }
+
+  &:hover {
+    background-color: $button-hover;
   }
 }

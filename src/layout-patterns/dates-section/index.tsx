@@ -7,7 +7,7 @@ export function DatesSection() {
   return (
     <section className='date-container'>
       <div className='image'>
-        <img src={DateImage} alt="" />
+        <img src={DateImage} alt="Três músicos tocando em um show" />
       </div>
       <div className='description'>
         <h2>
@@ -16,7 +16,9 @@ export function DatesSection() {
         <p>
           Hora de programar nossa memória com novas lembranças! Uma nova experiência sobre música, linguagens e, claro, tecnologia! Somos um festival diverso, com vários artistas e referências. Divirta-se!
         </p>
-        <Button text='Comprar ingresso!' icon={<LocalActivityIcon />} />
+        <div className="buy-button">
+          <Button text='Comprar ingresso!' icon={<LocalActivityIcon />} />
+        </div>
       </div>
     </section>
   );

@@ -1,3 +1,4 @@
+import HomeImage from '../../assets/images/home-image.jpg';
 import './style.scss';
 import { Banner } from "../../components/banner";
 import { Footer } from "../../components/footer";
@@ -18,6 +19,7 @@ export function Home() {
           <LineupDay />
           <LineupDay />
         </section>
+        <div className='banner-bottom' style={{ backgroundImage: `url(${HomeImage})` }}></div>
       </main>
       <Footer />
     </div>

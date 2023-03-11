@@ -8,6 +8,15 @@
   gap: 32px;
   background: $background-header;
 
+  @media screen and (min-width: $breakpoint-medium) {
+    flex-direction: column;
+    padding: 32px 60px;
+  }
+  @media screen and (min-width: $breakpoint-large) {
+    flex-direction: row;
+    padding: 32px 120px;
+  }
+
   .header__logo {
     width: 234px;
     height: 34px;
@@ -16,6 +25,10 @@
     img {
       object-fit: cover;
       flex: 1;
+    }
+
+    @media screen and (min-width: $breakpoint-medium) {
+      height: 64px;
     }
   }
 
@@ -67,6 +80,37 @@
         &:last-child {
           padding-bottom: 0;
         }
+      }
+    }
+
+    @media screen and (min-width: $breakpoint-medium) {
+      display: none;
+    }
+  }
+
+  .navmenu {
+    display: none;
+
+    @media screen and (min-width: $breakpoint-medium) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      width: 100%;
+    }
+    @media screen and (min-width: $breakpoint-large) {
+      width: fit-content;
+    }
+
+    a {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 40px;
+      text-align: center;
+      transition: all 0.25s ease-in-out;
+
+      &:hover {
+        text-shadow: $text-shadow;
       }
     }
   }
