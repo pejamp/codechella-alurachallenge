@@ -1,0 +1,35 @@
+@import '../../styles/style-guide.scss';
+
+.sector-card__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  .sector-card__image {
+    width: 312px;
+    height: 239px;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+    img {
+      object-fit: cover;
+      flex: 1;
+    }
+  }
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 38px;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 40px;
+    text-align: center;
+  }
+}
