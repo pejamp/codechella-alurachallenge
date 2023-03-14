@@ -1,5 +1,5 @@
-import HomeImage from '../../assets/images/home-image.jpg';
 import './style.scss';
+import HomeImage from '../../assets/images/home-image.jpg';
 import { Banner } from "../../components/banner";
 import { Footer } from "../../components/footer";
 import { Header } from "../../components/header";
@@ -12,7 +12,7 @@ export function Home() {
     <div className="home-container">
       <Header />
       <main className='home-container__content-wrap'>
-        <Banner bannerImage={BannerHomepage} hashtagCodeChella />
+        <Banner bannerText='Boas-vindas ao' bannerImage={BannerHomepage} hashtagCodeChella />
         <DatesSection />
         <section className='lineup'>
           <h2 className='lineup__title'>/Line-Up/</h2>
