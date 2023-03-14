@@ -1,0 +1,55 @@
+@import '../../styles/style-guide.scss';
+
+.accordion {
+
+  .accordion__title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: $button-color;
+
+    span {
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 38px;
+      color: $text-color;
+      text-align: left;
+    }
+
+    svg {
+      font-size: 32px;
+      color: $text-color;
+      transform: rotate(180deg);
+      transition: all 0.25s ease;
+    }
+
+    &.accordion__title--open {
+      svg {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  .accordion__content {
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    background-color: $light-blue;
+    color: $grey;
+    font-weight: 500;
+    line-height: 40px;
+    font-size: 1.25rem;
+    transition: all 0.25s ease;
+    
+    &.accordion__content--open {
+      max-height: 500px;
+      padding: 16px;
+      margin-bottom: 16px;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
