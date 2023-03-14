@@ -6,10 +6,11 @@ import { Header } from "../../components/header";
 import BannerHomepage from '../../assets/images/banner-homepage.jpg';
 import { DatesSection } from '../../layout-patterns/dates-section';
 import { LineupDay } from '../../layout-patterns/lineup-day';
+import { DefaultPage } from '../../layout-patterns/default-page';
 
 export function Home() {
   return (
-    <div className="home-container">
+    <DefaultPage>
       <Header />
       <main className='home-container__content-wrap'>
         <Banner bannerText='Boas-vindas ao' bannerImage={BannerHomepage} hashtagCodeChella />
@@ -22,6 +23,6 @@ export function Home() {
         <div className='banner-bottom' style={{ backgroundImage: `url(${HomeImage})` }}></div>
       </main>
       <Footer />
-    </div>
+    </DefaultPage>
   );
 }

@@ -7,10 +7,11 @@ import SecondSectionExperience from '../../assets/images/image2-experience.jpg'
 import ThirdSectionExperience from '../../assets/images/image3-experience.jpg'
 import './style.scss';
 import { ExperienceSection } from '../../layout-patterns/experience-section';
+import { DefaultPage } from '../../layout-patterns/default-page';
 
 export function Experience() {
   return (
-    <div className="experience-container">
+    <DefaultPage>
       <Header />
       <main>
         <Banner bannerText='A Experiência' bannerImage={BannerExperience} />
@@ -21,6 +22,6 @@ export function Experience() {
         </div>
       </main>
       <Footer />
-    </div>
+    </DefaultPage>
   )
 }

@@ -1,21 +1,15 @@
 @import '../../styles/style-guide.scss';
 
-.experience-container {
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+.experience-sections {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  .experience-sections {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    @media screen and (min-width: $breakpoint-medium) {
-      padding: 0 60px;
-    }
-    @media screen and (min-width: $breakpoint-large) {
-      padding: 0 120px;
-    }
+  @media screen and (min-width: $breakpoint-medium) {
+    padding: 0 60px;
+  }
+  @media screen and (min-width: $breakpoint-large) {
+    padding: 0 120px;
   }
 }

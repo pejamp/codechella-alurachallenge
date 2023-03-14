@@ -1,0 +1,84 @@
+@import '../../styles/style-guide.scss';
+
+.stadium {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .stadium__map {
+    width: 360px;
+    height: 360px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    
+    img {
+      object-fit: cover;
+      flex: 1;
+    }
+  }
+
+  .stadium__subtitles {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+
+    span {
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 40px;
+    }
+
+    .subtitles {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      li {
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 40px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: calc(32px + 16px);
+
+        &::before {
+          content: '';
+          width: 32px;
+          height: 32px;
+          background-color: grey;
+          position: absolute;
+          left: 0;
+        }
+
+        &.subtitles__premium {
+          &::before {
+            background-color: $sector-premium; 
+          }
+        }
+        &.subtitles__common {
+          &::before {
+            background-color: $sector-common; 
+          }
+        }
+        &.subtitles__ground {
+          &::before {
+            background-color: $sector-ground; 
+          }
+        }
+        &.subtitles__upper {
+          &::before {
+            background-color: $sector-upper; 
+          }
+        }
+        &.subtitles__ramps {
+          &::before {
+            background-color: $sector-ramps; 
+          }
+        }
+      }
+    }
+  }
+}
