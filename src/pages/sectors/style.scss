@@ -5,6 +5,17 @@
   flex-direction: column;
   align-items: center;
 
+  @media screen and (min-width: $breakpoint-medium) {
+    padding: 32px 60px;
+  }
+  @media screen and (min-width: $breakpoint-large) {
+    max-width: 1200px;
+    flex-direction: row;
+    gap: 48px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
   .stadium__map {
     width: 360px;
     height: 360px;
@@ -15,6 +26,15 @@
     img {
       object-fit: cover;
       flex: 1;
+    }
+
+    @media screen and (min-width: $breakpoint-medium) {
+      width: 648px;
+      height: 609px;
+    }
+    @media screen and (min-width: $breakpoint-large) {
+      align-items: flex-start;
+      width: 690px;
     }
   }
 
@@ -28,6 +48,13 @@
       font-weight: 700;
       font-size: 1.25rem;
       line-height: 40px;
+    }
+
+    @media screen and (min-width: $breakpoint-medium) {
+      span {
+        font-size: 2rem;
+        line-height: 38px;
+      }
     }
 
     .subtitles {
@@ -90,6 +117,7 @@
   gap: 32px;
   padding: 32px 24px;
 
+  
   h2 {
     font-weight: 700;
     font-size: 2rem;
@@ -97,9 +125,34 @@
     text-align: center;
   }
 
+  @media screen and (min-width: $breakpoint-medium) {
+    padding: 32px 60px;
+
+    h2 {
+      font-size: 2.5rem;
+      line-height: 47px;
+    }
+  }
+  @media screen and (min-width: $breakpoint-large) {
+    padding: 48px 60px;
+    gap: 48px;
+  }
+
   .details__cards {
     display: flex;
     flex-direction: column;
     gap: 32px;
+    
+    @media screen and (min-width: $breakpoint-large) {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 24px;
+      max-width: 1197px;
+      flex-wrap: wrap;
+
+      & > :nth-child(even) {
+        padding-top: 106px;
+      }
+    }
   }
 }

@@ -4,7 +4,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
   gap: 24px;
+
+  @media screen and (min-width: $breakpoint-medium) {
+    max-width: 648px;
+  }
+  @media screen and (min-width: $breakpoint-large) {
+    max-width: 383px;
+  }
 
   .sector-card__image {
     width: 312px;
@@ -17,6 +25,10 @@
     img {
       object-fit: cover;
       flex: 1;
+    }
+
+    @media screen and (min-width: $breakpoint-medium) {
+      width: 382px;
     }
   }
 
