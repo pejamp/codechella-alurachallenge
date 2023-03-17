@@ -7,11 +7,20 @@
   gap: 48px;
   padding: 48px 24px;
 
+  @media screen and (min-width: $breakpoint-medium) {
+    padding: 48px 60px;
+  }
+
   h2 {
     font-family: $title-font;
     font-size: 2rem;
     line-height: 42px;
     text-align: center;
+
+    @media screen and (min-width: $breakpoint-medium) {
+      font-size: 3rem;
+      line-height: 62px;
+    }
   }
 
   .questions__accordion {
@@ -19,5 +28,9 @@
     flex-direction: column;
     gap: 8px;
     width: 100%;
+
+    @media screen and (min-width: $breakpoint-large) {
+      max-width: 996px;
+    }
   }
 }
