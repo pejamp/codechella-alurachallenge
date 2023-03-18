@@ -6,6 +6,7 @@
   align-items: center;
   padding: 24px;
   gap: 32px;
+  background-color: $background-footer;
 
   @media screen and (min-width: $breakpoint-large) {
     flex-direction: row;

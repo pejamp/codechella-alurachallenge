@@ -1,0 +1,27 @@
+@import '../../styles/style-guide.scss';
+
+.ticket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 24px;
+  gap: 32px;
+
+  h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 38px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: $breakpoint-medium) {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  @media screen and (min-width: $breakpoint-large) {
+    max-width: 792px;
+    margin: auto;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
