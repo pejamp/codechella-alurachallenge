@@ -1,1 +1,116 @@
 @import '../../styles/style-guide.scss';
+
+.form-section {
+  padding: 32px 24px;
+
+  @media screen and (min-width: $breakpoint-medium) {
+    padding: 48px 60px;
+  }
+  @media screen and (min-width: $breakpoint-large) {
+    padding: 48px 120px;
+  }
+
+  .title {
+    font-family: $title-font;
+    font-size: 2rem;
+    line-height: 42px;
+    text-align: center;
+    margin-bottom: 48px;
+
+    @media screen and (min-width: $breakpoint-medium) {
+      font-size: 3rem;
+      line-height: 62px;
+    }
+  }
+
+  .form {
+    display: grid;
+    row-gap: 32px;
+    column-gap: 24px;
+
+    @media screen and (min-width: $breakpoint-large) {
+      max-width: 795px;
+      margin: 0 auto;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .form__label {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 38px;
+
+      @media screen and (min-width: $breakpoint-medium) {
+        &:last-of-type {
+          .form__input {
+            max-width: 453px;
+          }
+        }
+      }
+      @media screen and (min-width: $breakpoint-large) {
+        &:nth-of-type(1) {
+          grid-area: 1 / span 2;
+        }
+        &:nth-of-type(2) {
+          grid-area: 2 / span 2;
+        }
+        &:nth-of-type(3) {
+          grid-area: 3 / span 1;
+        }
+        &:nth-of-type(4) {
+          grid-area: 3 / span 1;
+        }
+      }
+    }
+
+    .form__input {
+      box-sizing: border-box;
+      height: 48px;
+      border: 0;
+      padding: 10px;
+      font-size: 1.25rem;
+      font-weight: 500;
+
+    }
+
+    .form__select-container {
+      position: relative;
+      background-color: #ffffff;
+
+      .form__select {
+        position: relative;
+        appearance: none;
+        width: 100%;
+        height: 48px;
+        border: 0;
+        padding: 10px;
+        font-size: 1.25rem;
+        font-weight: 500;
+        z-index: 2;
+        background-color: transparent;
+        cursor: pointer;
+      }
+
+      svg {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        color: $grey;
+        font-size: 32px;
+        z-index: 1;
+      }
+    }
+
+    .form__button {
+      width: 164px;
+      justify-self: center;
+
+      @media screen and (min-width: $breakpoint-large) {
+        grid-area: 4 / span 2;
+      }
+    }
+  }
+}

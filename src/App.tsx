@@ -1,17 +1,12 @@
-import { Experience } from "./pages/experience"
-import { Form } from "./pages/form"
-import { Home } from "./pages/home"
-import { Information } from "./pages/information"
-import { Sectors } from "./pages/sectors"
-import { Ticket } from "./pages/ticket"
-
+import { BrowserRouter } from 'react-router-dom';
+import { Router } from './routes';
 
 function App() {
 
   return (
-    <div className="App">
-      <Form />
-    </div>
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
   )
 }
 

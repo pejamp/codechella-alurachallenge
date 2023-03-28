@@ -1,8 +1,8 @@
+import { Link } from 'react-router-dom';
 import './style.scss';
 import Logo from '../../assets/logo-white.svg';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
-import { Icon } from '@mui/material';
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,25 +13,25 @@ export function Header() {
 
   return (
     <header className='header'>
-      <a href="#" className='header__logo'>
+      <Link to="/" className='header__logo'>
         <img src={Logo} alt="CodeChella Logo" />
-      </a>
+      </Link>
       <div className='header__hamburger-menu' onBlur={() => setMenuOpen(false)}>
         <button className='hamburger-menu__btn' onClick={handleMenuClick}>
           <MenuIcon />
         </button>
         <nav className={`hamburger-menu__content ${menuOpen ? 'open' : ''}`} onMouseDown={(event) => event.preventDefault()}>
-          <a href="#">A experiência</a>
-          <a href="#">Mapa de Setores</a>
-          <a href="#">Informações</a>
-          <a href="#">Ingresso</a>
+          <Link to="/experience">A experiência</Link>
+          <Link to="/sectors">Mapa de Setores</Link>
+          <Link to="/information">Informações</Link>
+          <Link to="/ticket">Ingresso</Link>
         </nav>
       </div>
       <nav className='navmenu'>
-        <a href="#">A experiência</a>
-        <a href="#">Mapa de Setores</a>
-        <a href="#">Informações</a>
-        <a href="#">Ingresso</a>
+        <Link to="/experience">A experiência</Link>
+        <Link to="/sectors">Mapa de Setores</Link>
+        <Link to="/information">Informações</Link>
+        <Link to="/ticket">Ingresso</Link>
       </nav>
     </header>
   );
