@@ -27,7 +27,7 @@ export function Footer() {
         </div>
       </div>
       <p className='footer__developed-by'>
-        Desenvolvido por Alura. Projeto fictício sem fins comerciais.
+        Desenvolvido por Pedro Rodrigues. Projeto fictício sem fins comerciais.
       </p>
     </footer>
   );

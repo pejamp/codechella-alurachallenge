@@ -54,7 +54,8 @@
     }
 
     .ticket__info {
-      
+      text-transform: capitalize;
+
       h3 {
         font-weight: 700;
         font-size: 2rem;
@@ -74,6 +75,7 @@
       @media screen and (min-width: $breakpoint-large) {
         h3 {
           margin-bottom: 24px;
+          text-align: left;
         }
 
         span {
