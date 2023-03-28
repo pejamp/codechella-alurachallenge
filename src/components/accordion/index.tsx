@@ -21,7 +21,7 @@ export function Accordion({ title, content }: AccordionProps) {
         <ArrowDropDownIcon />
       </button>
       <div className={`accordion__content ${open ? 'accordion__content--open' : ''}`}>
-        {content}
+        <p>{content}</p>
       </div>
     </div>
   );

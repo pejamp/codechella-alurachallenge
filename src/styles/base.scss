@@ -5,4 +5,34 @@ body {
   background: $background-color;
   font-size: 16px;
   color: $text-color;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-moz-scrollbar {
+    width: 8px;
+  }
+  &::-ms-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+  &::-moz-scrollbar-track {
+    background: $background-color;
+  }
+  &::-ms-scrollbar-track {
+    background: $background-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $boreal-purple;
+  }
+  &::-moz-scrollbar-thumb {
+    background: $boreal-purple;
+  }
+  &::-ms-scrollbar-thumb {
+    background: $boreal-purple;
+  }
 }

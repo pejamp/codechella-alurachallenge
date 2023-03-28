@@ -35,6 +35,8 @@
     line-height: 42px;
     text-align: center;
 
+    animation: animation();
+
     @media screen and (min-width: $breakpoint-medium) {
       font-size: 4rem;
       line-height: 83px;

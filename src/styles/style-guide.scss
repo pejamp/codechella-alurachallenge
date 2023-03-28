@@ -34,3 +34,21 @@ $sector-ramps: #003F86;
 $breakpoint-small: 360px;
 $breakpoint-medium: 560px;
 $breakpoint-large: 1200px;
+
+$duration: 1s;
+
+@keyframes loading-page {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@function animation() {
+  $output: #{loading-page} #{$duration} #{ease-in-out} #{forwards};
+  @return $output;
+}

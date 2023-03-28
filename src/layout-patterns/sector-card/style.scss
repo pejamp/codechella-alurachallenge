@@ -7,6 +7,8 @@
   flex: 1;
   gap: 24px;
 
+  animation: animation();
+
   @media screen and (min-width: $breakpoint-medium) {
     max-width: 648px;
   }

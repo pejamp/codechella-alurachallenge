@@ -8,6 +8,8 @@
   justify-content: center;
   gap: 32px;
 
+  animation: animation();
+
   @media screen and (min-width: $breakpoint-medium) {
     padding-left: 0;
     padding-right: 0;

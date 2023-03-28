@@ -20,7 +20,7 @@ export function TicketQrCode({ userData }: TicketProps) {
       <div className='ticket__content'>
         <img className='ticket__qrcode' src={QRCodeImage} alt="QR Code" />
         <div className='ticket__info'>
-          <h3>{userData.fullName}</h3>
+          <h3>{userData.fullName || 'Nome'}</h3>
           <span>Ingresso {userData.ticketType}</span>
           <span>Setor Pista</span>
           <span>Data: 11/03</span>

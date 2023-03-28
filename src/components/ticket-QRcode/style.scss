@@ -9,6 +9,8 @@
   background: $boreal-gradient;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
 
+  animation: animation();
+
   @media screen and (min-width: $breakpoint-medium) {
     width: 100%;
   }

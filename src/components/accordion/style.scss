@@ -1,6 +1,7 @@
 @import '../../styles/style-guide.scss';
 
 .accordion {
+  animation: animation();
 
   .accordion__title {
     width: 100%;
@@ -35,21 +36,21 @@
   .accordion__content {
     max-height: 0;
     overflow: hidden;
-    visibility: hidden;
-    opacity: 0;
     background-color: $light-blue;
-    color: $grey;
-    font-weight: 500;
-    line-height: 40px;
-    font-size: 1.25rem;
+    margin-bottom: 0px;
     transition: all 0.25s ease;
+    
+    p {
+      color: $grey;
+      font-weight: 500;
+      line-height: 40px;
+      font-size: 1.25rem;
+      padding: 16px;
+    }
     
     &.accordion__content--open {
       max-height: 500px;
-      padding: 16px;
       margin-bottom: 16px;
-      visibility: visible;
-      opacity: 1;
     }
   }
 }
