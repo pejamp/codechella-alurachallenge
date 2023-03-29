@@ -9,7 +9,6 @@
   @media screen and (min-width: $breakpoint-large) {
     padding: 0;
     padding-bottom: 56px;
-    max-width: 1197px;
   }
 
   .lineup__date {
@@ -21,6 +20,7 @@
       font-size: 2rem;
       line-height: 42px;
       text-align: center;
+      text-transform: uppercase;
     }
 
     @media screen and (min-width: $breakpoint-medium) {

@@ -7,6 +7,8 @@ import BannerHomepage from '../../assets/images/banner-homepage.jpg';
 import { DatesSection } from '../../layout-patterns/dates-section';
 import { LineupDay } from '../../layout-patterns/lineup-day';
 import { DefaultPage } from '../../layout-patterns/default-page';
+import { lineupSaturday } from '../../data/saturday';
+import { lineupSunday } from '../../data/sunday';
 
 export function Home() {
   return (
@@ -17,8 +19,8 @@ export function Home() {
         <DatesSection />
         <section className='lineup'>
           <h2 className='lineup__title'>/Line-Up/</h2>
-          <LineupDay />
-          <LineupDay />
+          <LineupDay weekday='sábado' day='11/03' attractions={lineupSaturday} />
+          <LineupDay weekday='domingo' day='12/03' attractions={lineupSunday} />
         </section>
         <div className='banner-bottom' style={{ backgroundImage: `url(${HomeImage})` }}></div>
       </main>

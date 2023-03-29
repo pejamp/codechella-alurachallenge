@@ -1,31 +1,38 @@
 import './style.scss';
 
-export function LineupDay() {
+type Attraction = {
+  id: number;
+  type: string;
+  name: string;
+}
+
+interface LineupDayProps {
+  weekday: string;
+  day: string;
+  attractions: Attraction[];
+}
+
+export function LineupDay({ day, weekday, attractions }: LineupDayProps) {
   return (
     <div className='lineup-day'>
       <div className='lineup__date'>
-        <h3>SÁBADO {'<'}11/03{'>'}</h3>
+        <h3>{weekday} {'<'}{day}{'>'}</h3>
       </div>
       <div className='lineup__attractions'>
-        <h3 className='attractions__headliner'>System of a DOM</h3>
-      
-        <h4 className='attractions__second'>Python Maiden</h4>
-        <h4 className='attractions__second'>Apollo Client 2001</h4>
-      
-        <h4 className='attractions__second'>Bon Java</h4>
-        <h4 className='attractions__second'>NickCallback</h4>
-      
-        <h5 className='attractions__third'>Linkin Promises</h5>
-        <h5 className='attractions__third'>Fullstack Fighters</h5>
-    
-        <h5 className='attractions__third'>Papa React</h5>
-        <h5 className='attractions__third'>Angular in Chains</h5>
-    
-        <h6 className='attractions__fourth'>Agnostic Front-end</h6>
-        <h6 className='attractions__fourth'>SlipkNode</h6>
-      
-        <h6 className='attractions__fourth'>Pink Flutter</h6>
-        <h6 className='attractions__fourth'>Kiss</h6> 
+        {attractions.map((attraction) => {
+          if (attraction.type == 'first') {
+            return (<h3 className='attractions__headliner'>{attraction.name}</h3>)
+          } 
+          if (attraction.type == 'second') {
+            return (<h4 className='attractions__second'>{attraction.name}</h4>)
+          } 
+          if (attraction.type == 'third') {
+            return (<h5 className='attractions__third'>{attraction.name}</h5>)
+          } 
+          if (attraction.type == 'fourth') {
+            return (<h6 className='attractions__fourth'>{attraction.name}</h6>)
+          } 
+        })}
       </div>
     </div>
   );
